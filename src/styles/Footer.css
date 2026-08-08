@@ -1,0 +1,201 @@
+.footer {
+  background-color: #0C0C0C;
+  border-top: 4px solid var(--accent-red);
+  padding-top: 60px;
+  position: relative;
+  color: var(--text-secondary);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr 1fr;
+  gap: 32px;
+  padding-bottom: 40px;
+}
+
+/* Info Column */
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-logo-link {
+  display: inline-block;
+  max-width: 160px;
+}
+
+.footer-logo-img {
+  max-height: 44px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all var(--transition-fast);
+}
+
+.social-icon:hover {
+  background-color: var(--accent-red);
+  color: #fff;
+  border-color: #000;
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 0px #000;
+}
+
+/* Title Column Headers */
+.footer-title {
+  font-family: var(--font-street);
+  font-size: 1.15rem;
+  letter-spacing: 1.5px;
+  color: #fff;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--accent-red);
+  padding-bottom: 6px;
+  width: fit-content;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--accent-red);
+  padding-left: 4px;
+}
+
+/* Contact Column */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-info li {
+  display: flex;
+  gap: 10px;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.contact-icon {
+  color: var(--accent-red);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Hours Column */
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hours-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.8rem;
+}
+
+.hours-list .day {
+  font-weight: 700;
+  color: #fff;
+}
+
+.hours-list .time {
+  color: var(--text-secondary);
+}
+
+.hours-list .time-closed {
+  color: var(--accent-red);
+  font-weight: 700;
+  font-family: var(--font-street);
+  letter-spacing: 0.5px;
+}
+
+/* Barcode Merah Rapat di Atas Copyright */
+.footer-bottom-barcode {
+  height: 10px;
+  width: 100%;
+  background-image: repeating-linear-gradient(90deg, 
+    var(--border-color), 
+    var(--border-color) 3px, 
+    transparent 3px, 
+    transparent 7px, 
+    var(--accent-red) 7px, 
+    var(--accent-red) 9px,
+    transparent 9px,
+    transparent 12px
+  );
+  opacity: 0.85;
+  margin-top: 20px;
+}
+
+/* Footer Bottom Section (Centered) */
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  border-top: none;
+  text-align: center;
+}
+
+.footer-bottom .developer {
+  text-align: center;
+  font-family: var(--font-typewriter);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,209 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: rgba(12, 12, 12, 0.95); /* Menggunakan warna dasar #0C0C0C dengan transparansi 95% */
+  border-bottom: 2px solid var(--border-color);
+  backdrop-filter: blur(8px); /* Opsional: memberikan efek kaca buram halus saat di-scroll */
+  z-index: 1000;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar.scrolled {
+  background-color: #141110;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid var(--accent-red);
+}
+
+.navbar-top-barcode {
+  height: 6px;
+  width: 100%;
+  background-image: repeating-linear-gradient(90deg, 
+    #fff, 
+    #fff 2px, 
+    transparent 2px, 
+    transparent 6px, 
+    var(--accent-red) 6px, 
+    var(--accent-red) 10px, 
+    transparent 10px, 
+    transparent 14px
+  );
+  opacity: 0.9;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding-bottom: 4px;
+}
+
+.navbar-logo-link {
+  display: flex;
+  align-items: center;
+  height: 80%;
+  max-width: 180px;
+}
+
+.navbar-logo-img {
+  max-height: 48px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 32px;
+}
+
+.navbar-menu a {
+  font-family: var(--font-street);
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+  font-weight: 500;
+  padding: 8px 4px;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.navbar-menu a:hover {
+  color: var(--accent-red);
+}
+
+.navbar-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--accent-red);
+  transition: width var(--transition-fast);
+}
+
+.navbar-menu a:hover::after {
+  width: 100%;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-agendar {
+  background-color: var(--accent-red);
+  color: #fff;
+  border: 2px solid #000;
+  font-family: var(--font-street);
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  padding: 8px 18px;
+  box-shadow: 3px 3px 0px #000;
+  display: inline-flex;
+  align-items: center;
+  transition: all var(--transition-fast);
+}
+
+.btn-agendar:hover {
+  background-color: var(--accent-red-hover);
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #000;
+}
+
+.btn-agendar:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px #000;
+}
+
+.mobile-toggle {
+  display: none;
+  color: var(--text-primary);
+}
+
+/* Mobile Menu */
+.navbar-mobile {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  background-color: #141110;
+  border-top: 2px solid var(--accent-red);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal);
+  z-index: 999;
+}
+
+.navbar-mobile.active {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar-mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 24px;
+  padding: 40px 24px;
+}
+
+.navbar-mobile-menu a {
+  font-family: var(--font-street);
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+  transition: color var(--transition-fast);
+}
+
+.navbar-mobile-menu a:hover {
+  color: var(--accent-red);
+}
+
+.mobile-action-item {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+.btn-agendar-mobile {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: var(--accent-red);
+  color: #fff;
+  border: 3px solid #000;
+  font-family: var(--font-street);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  padding: 12px;
+  box-shadow: 4px 4px 0px #000;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .navbar-menu {
+    display: none;
+  }
+  
+  .btn-agendar {
+    display: none;
+  }
+  
+  .mobile-toggle {
+    display: block;
+  }
+}

@@ -1,0 +1,212 @@
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  padding-top: calc(var(--header-height) + 40px);
+  padding-bottom: 80px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #0C0C0C; 
+  background-image: 
+    radial-gradient(rgba(157, 31, 34, 0.08) 1px, transparent 0),
+    radial-gradient(rgba(255, 255, 255, 0.01) 2px, transparent 0);
+  background-size: 16px 16px, 32px 32px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.hero-tag-wrap {
+  margin-bottom: 16px;
+}
+
+.hero-marker-tag {
+  font-family: var(--font-marker);
+  color: var(--accent-red);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0px #000;
+}
+
+.hero-title {
+  font-family: var(--font-street);
+  font-size: 5rem;
+  line-height: 0.9;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.hero-title .stroke-text {
+  color: transparent;
+  -webkit-text-stroke: 2px #FFFFFF;
+  text-shadow: 4px 4px 0px var(--accent-red);
+  font-size: 5.5rem;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: 32px;
+}
+
+.hero-actions {
+  margin-bottom: 48px;
+}
+
+/* Warnings/Benefit ribbons in "WHO THIS CLASS IS FOR" style */
+.hero-stickers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 580px;
+}
+
+.sticker-strip {
+  background-color: #000;
+  border: 1px solid #333;
+  padding: 6px 16px;
+  width: fit-content;
+  border-left: 5px solid var(--accent-red);
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.sticker-strip span {
+  font-family: var(--font-street);
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  color: #fff;
+}
+
+.sticker-strip:nth-child(even) {
+  border-left: 5px solid #fff;
+  border-right: 5px solid var(--accent-red);
+}
+
+/* Visual frame */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-image-frame {
+  position: relative;
+  background-color: #fff;
+  padding: 16px 16px 36px 16px;
+  border: 3px solid #000;
+  box-shadow: 10px 10px 0px var(--accent-red);
+  transform: rotate(2deg);
+  max-width: 100%;
+}
+
+.hero-store-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border: 2px solid #000;
+}
+
+.top-barcode {
+  height: 12px;
+  background-image: repeating-linear-gradient(90deg, 
+    #000, 
+    #000 2px, 
+    transparent 2px, 
+    transparent 6px, 
+    #000 6px, 
+    #000 8px
+  );
+  margin-bottom: 10px;
+}
+
+.bottom-barcode {
+  height: 24px;
+  background-image: repeating-linear-gradient(90deg, 
+    #000, 
+    #000 3px, 
+    transparent 3px, 
+    transparent 8px, 
+    #000 8px, 
+    #000 14px
+  );
+  margin-top: 14px;
+}
+
+/* Street Stamp badge */
+.hero-stamp-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background-color: var(--accent-red);
+  color: #fff;
+  border: 3px solid #000;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-15deg);
+  box-shadow: 4px 4px 0px #000;
+  z-index: 5;
+}
+
+.stamp-text-inner {
+  font-family: var(--font-street);
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .hero-visual {
+    order: -1;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .hero-title .stroke-text {
+    font-size: 4rem;
+  }
+  
+  .hero-image-frame {
+    max-width: 480px;
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  
+  .hero-title .stroke-text {
+    font-size: 3.2rem;
+  }
+  
+  .sticker-strip span {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+}

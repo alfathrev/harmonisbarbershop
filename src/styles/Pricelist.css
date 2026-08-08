@@ -1,0 +1,270 @@
+.pricelist-section {
+  background-color: #0C0C0C; /* Diselaraskan ke warna gelap pekat #0C0C0C */
+  position: relative;
+  padding: 80px 0;
+}
+
+/* Pricelist Board Container */
+.pricelist-board {
+  background-color: #EFEFEF; /* Light grey/off-white board like the image */
+  background-image: 
+    radial-gradient(rgba(0, 0, 0, 0.05) 15%, transparent 20%),
+    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
+  background-size: 10px 10px, 100% 100%;
+  border: 4px solid #000;
+  border-radius: 4px;
+  padding: 48px;
+  color: #1A1A1A;
+  box-shadow: 12px 12px 0px var(--accent-red);
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Metal bolts on the board corners for industrial streetwise aesthetic */
+.board-bolt {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #7A7A7A;
+  border: 2px solid #000;
+  border-radius: 50%;
+  box-shadow: inset -2px -2px 0px rgba(0,0,0,0.3);
+}
+
+.board-bolt::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 2px;
+  background-color: #000;
+}
+
+.board-bolt.top-left { top: 12px; left: 12px; }
+.board-bolt.top-right { top: 12px; right: 12px; }
+.board-bolt.bottom-left { bottom: 12px; left: 12px; }
+.board-bolt.bottom-right { bottom: 12px; right: 12px; }
+
+.board-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.board-title {
+  font-family: var(--font-street);
+  font-size: 3.8rem;
+  color: var(--accent-red);
+  letter-spacing: 4px;
+  line-height: 1;
+  text-shadow: 1px 1px 0px #000;
+  margin: 0;
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+/* Packages Column */
+.package-item {
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+}
+
+.package-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: 800;
+}
+
+.package-name {
+  font-family: var(--font-street);
+  font-size: 1.8rem;
+  color: #000;
+}
+
+.package-dots {
+  flex-grow: 1;
+  border-bottom: 3px dotted #8E8381;
+  margin: 0 12px;
+}
+
+.package-price {
+  font-family: var(--font-street);
+  font-size: 1.8rem;
+  color: var(--accent-red);
+}
+
+.package-details {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4A4A4A;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* Treatments Column */
+.column-subtitle {
+  font-family: var(--font-street);
+  font-size: 2.2rem;
+  color: var(--accent-red);
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.treatment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.treatment-name {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: #1A1A1A;
+}
+
+.treatment-dots {
+  flex-grow: 1;
+  border-bottom: 2px dotted #8E8381;
+  margin: 0 10px;
+}
+
+.treatment-price {
+  font-family: var(--font-street);
+  font-size: 1.4rem;
+  color: var(--accent-red);
+}
+
+/* Board Footer Promo Block */
+.board-footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+/* Special Price Card */
+.special-price-card {
+  background-color: #1C1817; /* Dark background card */
+  border: 3px solid #EFA01B; /* Yellow-gold border */
+  border-radius: 4px;
+  padding: 24px;
+  color: #FFF;
+  position: relative;
+  box-shadow: 4px 4px 0px #000;
+}
+
+.special-badge {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background-color: #EFA01B;
+  color: #000;
+  font-family: var(--font-street);
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 2px 12px;
+  border: 2px solid #000;
+}
+
+.special-title {
+  font-family: var(--font-street);
+  font-size: 1.6rem;
+  color: #FFF;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.special-price-value {
+  font-family: var(--font-street);
+  font-size: 2.5rem;
+  color: #EFA01B;
+  margin-bottom: 12px;
+}
+
+.special-desc {
+  font-size: 0.85rem;
+  color: #D4CDCB;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+/* New Treatment Card */
+.new-treatment-card {
+  border: 3px dashed var(--accent-red);
+  border-radius: 4px;
+  padding: 24px;
+  color: #1A1A1A;
+  position: relative;
+}
+
+.new-badge {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background-color: var(--accent-red);
+  color: #FFF;
+  font-family: var(--font-street);
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 2px 12px;
+  border: 2px solid #000;
+}
+
+.new-title {
+  font-family: var(--font-street);
+  font-size: 1.6rem;
+  color: var(--accent-red);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.new-price-value {
+  font-family: var(--font-street);
+  font-size: 2.5rem;
+  color: var(--accent-red);
+  margin-bottom: 12px;
+}
+
+.new-desc {
+  font-size: 0.85rem;
+  color: #4A4A4A;
+  line-height: 1.4;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .pricelist-board {
+    padding: 24px 16px;
+  }
+  
+  .board-title {
+    font-size: 2.8rem;
+  }
+  
+  .board-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .board-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .package-name, .package-price {
+    font-size: 1.4rem;
+  }
+  
+  .column-subtitle {
+    font-size: 1.8rem;
+  }
+}

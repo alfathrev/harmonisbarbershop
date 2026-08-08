@@ -1,0 +1,158 @@
+.gallery-section {
+  background-color: #0C0C0C; /* Diselaraskan ke warna gelap pekat #0C0C0C */
+  position: relative;
+  padding: 80px 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* Polaroid Frame Design */
+.gallery-item-card {
+  background-color: #FFFFFF;
+  border: 3px solid #000000;
+  padding: 12px 12px 20px 12px;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.4);
+  transition: all var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Alternate slight tilts for polaroid pile style */
+.gallery-item-card:nth-child(odd) {
+  transform: rotate(-1.5deg);
+}
+
+.gallery-item-card:nth-child(even) {
+  transform: rotate(1.5deg);
+}
+
+.gallery-item-card:hover {
+  transform: scale(1.03) rotate(0deg) !important;
+  box-shadow: 10px 10px 0px var(--accent-red);
+  z-index: 10;
+}
+
+.gallery-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #000;
+  aspect-ratio: 1;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.gallery-item-card:hover .gallery-image {
+  transform: scale(1.05);
+}
+
+/* Polaroid Captions underneath */
+.gallery-polaroid-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  color: #1a1a1a;
+  padding: 0 4px;
+}
+
+.style-label-marker {
+  font-family: var(--font-street);
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+  color: #000;
+}
+
+.barber-label-marker {
+  font-family: var(--font-marker);
+  font-size: 0.8rem;
+  color: var(--accent-red);
+}
+
+/* Overlay styling */
+.gallery-item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(157, 31, 34, 0.9); /* Brand red translucent */
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  transition: opacity var(--transition-normal);
+  z-index: 2;
+}
+
+.gallery-item-card:hover .gallery-item-overlay {
+  opacity: 1;
+}
+
+.gallery-item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.gallery-barber-tag {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  font-family: var(--font-street);
+  font-size: 0.9rem;
+  padding: 4px 10px;
+  letter-spacing: 1px;
+}
+
+.gallery-style-title {
+  font-family: var(--font-street);
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.gallery-booking-link {
+  font-family: var(--font-street);
+  font-size: 1rem;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 2px;
+  letter-spacing: 1px;
+  transition: all var(--transition-fast);
+}
+
+.gallery-booking-link:hover {
+  letter-spacing: 2px;
+  color: #000;
+  border-bottom-color: #000;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,120 @@
+.barbers-section {
+  background-color: #0C0C0C; /* Diselaraskan ke warna gelap pekat #0C0C0C */
+  position: relative;
+  padding: 80px 0;
+}
+
+.arrows-red {
+  color: #E32626;
+  font-family: monospace;
+}
+
+.barbers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+/* Card Container */
+.barber-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Container Poster Gambar Murni */
+.barber-poster-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 3px solid #FFFFFF;
+  box-shadow: 6px 6px 0px #000000; /* Hard Shadow khas Streetwear/Brutalism */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.barber-poster-wrapper:hover {
+  transform: translateY(-6px);
+  border-color: #9D1F22;
+  box-shadow: 10px 10px 0px #9D1F22;
+}
+
+.barber-poster-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Certificate & Experience Board */
+.barber-certs-board {
+  background-color: #121117;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  padding: 20px;
+  min-height: 200px;
+}
+
+.certs-header {
+  border-bottom: 2px dashed #E32626;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+.certs-header-tag {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #E32626;
+  display: block;
+  text-transform: uppercase;
+}
+
+.certs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cert-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #D6D6D6;
+}
+
+.cert-bullet {
+  color: #E32626;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.cert-text {
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .barbers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .barbers-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
