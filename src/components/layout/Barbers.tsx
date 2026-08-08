@@ -73,9 +73,9 @@ const Barbers: React.FC = () => {
                   onContextMenu={(e) => e.preventDefault()}
                   style={{
                     userSelect: 'none',
-                    webkitUserDrag: 'none',
-                    pointerEvents: 'none'
-                  }}
+                    pointerEvents: 'none',
+                    WebkitUserDrag: 'none'
+                  } as React.CSSProperties}
                 />
               </div>
 
