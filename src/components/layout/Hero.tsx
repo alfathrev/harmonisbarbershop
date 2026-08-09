@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
             />
             {/* Stamp/Label Overlay */}
             <div className="hero-stamp-badge">
-              <span className="stamp-text-inner">ASLI KOTA TEGAL</span>
+              <span className="stamp-text-inner">BARBER LOKAL TEGAL</span>
             </div>
             <div className="barcode-strip bottom-barcode"></div>
           </div>

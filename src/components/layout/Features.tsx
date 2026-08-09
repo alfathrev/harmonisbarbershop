@@ -23,12 +23,12 @@ const Features: React.FC = () => {
     {
       icon: <Sparkles size={32} className="feature-icon" />,
       title: "Tempat Premium",
-      desc: "Suasana nyaman dengan interior eksklusif dan minuman gratis."
+      desc: "Suasana eksklusif, nyaman, dan bersih untuk kenyamanan maksimal Anda."
     },
     {
       icon: <CreditCard size={32} className="feature-icon" />,
       title: "Kemudahan Pembayaran",
-      desc: "Menerima pembayaran via e-wallet, debit, QRIS, dan tunai."
+      desc: "Menerima pembayaran Cash, Transfer, Qris."
     }
   ];
 
