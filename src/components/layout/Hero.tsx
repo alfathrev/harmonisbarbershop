@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
           </h1>
 
           <p className="hero-description">
-            Bukan sekadar potong rambut biasa. Kami menyajikan kualitas grooming jalanan premium, berkelas, presisi tinggi, dan bersertifikat BNSP.
+            More than just a Haircut. We're ready to provide premium services with our certified barber's. Hair is a gentleman's crown, so do your hair rights! Be a part of Harmonis Barber Society.
           </p>
 
           <div className="hero-actions">
@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
             />
             {/* Stamp/Label Overlay */}
             <div className="hero-stamp-badge">
-              <span className="stamp-text-inner">BARBER LOKAL TEGAL</span>
+              <span className="stamp-text-inner">Modern Barber</span>
             </div>
             <div className="barcode-strip bottom-barcode"></div>
           </div>
